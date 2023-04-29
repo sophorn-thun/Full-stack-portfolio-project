@@ -16,7 +16,6 @@
 
 html {
   font-family: 'Lora',sans-serif;
-  font-style: italic;
   scroll-behavior: smooth;
 }
 
@@ -106,6 +105,25 @@ nav ul {
   color: rgb(41, 120, 181)
 }
 
+.hello {
+  overflow: hidden;
+  border-right: .12em solid rgb(173, 35, 69);
+  white-space: nowrap;
+  font-size: 3em;
+  animation: typing 4s steps(20) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+
 /*------------------------------------------------------Style for About section---------------------------------------------*/
 .container-about {
   grid-gap: 2rem;
@@ -116,40 +134,44 @@ nav ul {
 }
 
 .container-about .about-me {
-  padding-top: 30px;
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
   font-weight: 600;
-  font-size: 20px;
-  color: rgb(173, 35, 69);
+  font-size: 1em;
+  color: #fff;
   justify-content: center;
   align-self: center;
   justify-items: center;
   text-align:center;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(41, 120, 181);
 
 }
 .div-about p {
-  padding: 50px;
+  margin: 20px;
   font-size: 20px;
   font-weight: 400;
-  text-align: justify;
-}
-.div-about br {
-  margin-top: 50px;
+  text-align: center;
 }
 .container-about .div-about ul {
   padding: 1rem;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .container-about .div-about ul li {
   list-style: none;
-  padding: 2rem;
-  font-size: 60px;
+  padding: 1rem;
+  font-size: 40px;
   color:rgb(173, 35, 69);
-  max-width: 100%;
+  max-width: 90%;
   display: flex;
+  flex-wrap: wrap;
 }
 .container-about .div-about .div-title {
   color:rgb(41, 120, 181);
@@ -384,6 +406,10 @@ nav ul {
   font-weight: 600;
   border-radius: 10px;
 }
+.fetch-image .buttonClick:hover {
+  cursor: pointer;
+}
+
 
 /*------------------------------------------------------Responsive design--------------------------------------------*/
 nav .fa-solid {
@@ -504,3 +530,4 @@ nav .fa-solid {
     font-size: 10px;
   }
 }
+
