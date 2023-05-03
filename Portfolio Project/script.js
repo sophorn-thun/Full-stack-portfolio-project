@@ -1,4 +1,4 @@
-// Get all the anchor tags with class nav-link
+/*----------------Single Page Application--------------*/
 const links = document.querySelectorAll('.nav-link');
 
 links.forEach(link => {
@@ -14,7 +14,7 @@ links.forEach(link => {
   });
 });
 
-// Event handling on-click for header section
+/*----------------Event handling header section-------------*/
 let sideMenu = document.querySelector(".side-menu");
 function openMenu() {
   sideMenu.style.right = "0";
@@ -24,7 +24,7 @@ function closeMenu() {
   sideMenu.style.right = "-180px";
 }
 
-// Fetch Data - Get
+/*--------------Fetch Data - Get---------------*/
 let btn = document.querySelector('.buttonClick');
 let image = document.getElementById('image');
 
@@ -38,8 +38,7 @@ btn.addEventListener('click', function () {
     .catch(err => console.log(err))
 })
 
-// Fetch Data - Post
-
+/*-----------Fetch Data - Post----------------*/
 let form = document.querySelector('#form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
