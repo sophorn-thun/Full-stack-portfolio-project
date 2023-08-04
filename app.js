@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use('/static', express.static(join(__dirname, 'public')));
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 app.use('/', router);
 
