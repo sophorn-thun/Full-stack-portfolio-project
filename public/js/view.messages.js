@@ -3,7 +3,7 @@ export const viewAllMessages = async () => {
     const token = sessionStorage.getItem('jwt');
     if (!token) throw new Error('No authorization token found!');
 
-    const res = await fetch('http://127.0.0.1:3000/messages', {
+    const res = await fetch('https://intense-ravine-84337-b26da14fff11.herokuapp.com/messages', {
       headers: {
         'Authorization': 'Bearer ' + token
       }

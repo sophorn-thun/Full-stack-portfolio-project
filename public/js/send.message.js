@@ -6,7 +6,7 @@ export const postMessageHandler = async (name, email, message) => {
       message
     });
     console.log(body);
-    const res = await fetch('http://127.0.0.1:3000/messages', {
+    const res = await fetch('https://intense-ravine-84337-b26da14fff11.herokuapp.com/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

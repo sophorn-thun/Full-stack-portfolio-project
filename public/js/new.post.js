@@ -8,7 +8,7 @@ export const newPost = async (title, description) => {
       description
     });
 
-    const res = await fetch('http://127.0.0.1:3000/posts', {
+    const res = await fetch('https://intense-ravine-84337-b26da14fff11.herokuapp.com/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
