@@ -18,7 +18,7 @@ let connectionPool;
 //   }
 // }
 
-async function startConnectionPool() {
+export async function startConnectionPool() {
   if (!connectionPool) {
     const dbUrl = new URL(process.env.CLEARDB_DATABASE_URL);
     
@@ -47,7 +47,5 @@ async function getConnection() {
     throw error;
   }
 }
-
-startConnectionPool();
 
 export default getConnection;
