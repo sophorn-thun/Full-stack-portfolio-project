@@ -11,14 +11,13 @@ let connectionPool;
 //       host: '127.0.0.1',
 //       user: 'root',
 //       password: 'Ilovemymom012@',
-//       database: 'portfolio_website',
-      
+//       database: 'portfolio_website'
 //     });
 //     console.log('Connection pool created');
 //   }
 // }
 
-export async function startConnectionPool() {
+async function startConnectionPool() {
   if (!connectionPool) {
     const dbUrl = new URL(process.env.CLEARDB_DATABASE_URL);
     
@@ -31,13 +30,12 @@ export async function startConnectionPool() {
       host,
       user,
       password,
-      database
+      database,
     })
   }
 }
 
-
-export async function getConnection() {
+async function getConnection() {
   try {
     const connection = await connectionPool.getConnection();
     console.log('Connection acquired from the pool');
@@ -47,3 +45,7 @@ export async function getConnection() {
     throw error;
   }
 }
+
+startConnectionPool();
+
+export default getConnection;
