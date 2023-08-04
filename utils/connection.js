@@ -35,6 +35,7 @@ async function startConnectionPool() {
   }
 }
 
+
 async function getConnection() {
   try {
     const connection = await connectionPool.getConnection();
