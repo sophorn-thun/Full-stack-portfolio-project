@@ -3,7 +3,6 @@ import express from 'express';
 import { router } from './api.routes.js';
 import { fileURLToPath } from 'url';
 import { join, dirname } from 'path';
-import { startConnection } from './utils/connection.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -14,7 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use('/static', express.static(join(__dirname, 'public')))
 
-startConnection();
 
 app.use('/', router);
 app.all('*', (req, res, next) => {
