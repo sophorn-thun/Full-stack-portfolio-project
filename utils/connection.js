@@ -8,11 +8,12 @@ let connectionPool;
 async function startConnectionPool() {
   if (!connectionPool) {
     try {
-      const dbUrl = new URL(process.env.CLEARDB_DATABASE_URL);
-      const host = dbUrl.hostname;
-      const user = dbUrl.username;
-      const password = dbUrl.password;
-      const database = dbUrl.pathname.substr(1);
+      const url = new URL(process.env.CLEARDB_DATABASE_URL);
+
+      const host = url.host;
+      const user = url.username;
+      const password = url.password;
+      const database = url.pathname.substr(1);
 
       connectionPool = mysql.createPool({
         host,
