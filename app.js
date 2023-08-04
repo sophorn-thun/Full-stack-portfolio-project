@@ -1,6 +1,6 @@
 import cors from 'cors'
 import express from 'express';
-import { router } from './portfolio-spa/api.routes.js';
+import { router } from './api.routes.js';
 import { fileURLToPath } from 'url';
 import { join, dirname } from 'path';
 
