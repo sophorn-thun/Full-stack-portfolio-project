@@ -1,1 +1,1 @@
-web: cd portfolio-spa/ && npm install && node app.js
+web: node app.js && install npm
