@@ -1,3 +1,5 @@
+process.env.NODE_ENV = 'production';
+
 import cors from 'cors';
 import express from 'express';
 import { router } from './api.routes.js';
