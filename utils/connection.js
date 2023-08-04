@@ -31,13 +31,13 @@ export async function startConnectionPool() {
       host,
       user,
       password,
-      database,
+      database
     })
   }
 }
 
 
-async function getConnection() {
+export async function getConnection() {
   try {
     const connection = await connectionPool.getConnection();
     console.log('Connection acquired from the pool');
@@ -47,5 +47,3 @@ async function getConnection() {
     throw error;
   }
 }
-
-export default getConnection;

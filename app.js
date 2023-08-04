@@ -1,10 +1,9 @@
 import cors from 'cors';
-import mysql from 'mysql2/promise'
 import express from 'express';
 import { router } from './api.routes.js';
 import { fileURLToPath } from 'url';
 import { join, dirname } from 'path';
-import startConnectionPool from './utils/connection.js';
+import { startConnectionPool } from './utils/connection.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
