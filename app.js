@@ -11,8 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use('/static', express.static(join(__dirname, 'public')));
-
+app.use(express.static(join(__dirname, 'public')));
 
 app.use('/', router);
 
