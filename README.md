@@ -1,6 +1,5 @@
-# Hobby-Projects
+# Portfolio website
 
-This repository contains all my hobby project.
-Check it out!
+This repository contains codes for my portfolio website
 
 
