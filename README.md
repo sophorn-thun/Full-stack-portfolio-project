@@ -2,7 +2,7 @@
 
 Welcome to my Full Stack Portfolio Site project! This project showcases my skills in both front-end and back-end web development.
 
-Deployed version: [https://sophorn-fullstack-d7e4a946dea8.herokuapp.com/]
+Deployed version: full-stack-portfolio-project.vercel.app
 
 ## Tech Stack
 
