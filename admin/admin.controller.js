@@ -1,6 +1,4 @@
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptjs'; 
-
 import getConnection from '../utils/connection.js';
 
 export const adminLogin = async (req, res) => {
@@ -11,8 +9,7 @@ export const adminLogin = async (req, res) => {
     const [results] = await connection.query('SELECT * FROM adminUsers WHERE email = ?', [email]);
 
     if (results.length > 0) {
-      const match = await bcrypt.compare(password, results[0].password); // Use bcrypt.compare from bcryptjs
-      if (match) {
+      if (password === results[0].password) {
         const token = jwt.sign(
           {
             email: email,

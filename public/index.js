@@ -133,8 +133,8 @@ createNewPostButton.addEventListener('click', (event) => {
 submitNewPostButton.addEventListener('click', async event => {
   event.preventDefault();
 
-  titleInput.innerHTML = '';
-  contentInput.innerHTML = '';
+  titleInput.value = '';
+  contentInput.value= '';
 
   const title = titleInput.value;
   const description = contentInput.value;

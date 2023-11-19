@@ -5,5 +5,5 @@ import * as controller from './admin.controller.js';
 
 export const router = express.Router();
 
-router.post('/admins/login', validate(schema), controller.adminLogin)
+router.post('/login', validate(schema), controller.adminLogin)
 

@@ -18,9 +18,7 @@
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.1",
     "mysql": "^2.18.1",
-    "mysql2": "^3.5.1"
-  },
-  "devDependencies": {
-    "@flydotio/dockerfile": "^0.4.10"
+    "mysql2": "^3.5.1",
+    "nodemon": "^3.0.1"
   }
 }

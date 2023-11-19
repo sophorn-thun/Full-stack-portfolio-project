@@ -7,7 +7,7 @@ const allPostsPage = document.querySelector('#show-all-posts');
 
 export const viewAllPosts = async () => {
   try {
-    const res = await fetch('https://intense-ravine-84337-b26da14fff11.herokuapp.com/posts');
+    const res = await fetch('http://127.0.0.1:3000/posts');
     if (!res.ok) {
       throw new Error('Network response error!')
     }
@@ -65,7 +65,7 @@ export const viewAllPosts = async () => {
 
 const showPost = async (id) => {
   try {
-    const res = await fetch(`https://intense-ravine-84337-b26da14fff11.herokuapp.com/posts/${id}`);
+    const res = await fetch(`http://127.0.0.1:3000/posts/${id}`);
     if (!res.ok) {
       throw new Error('Network response error!')
     }

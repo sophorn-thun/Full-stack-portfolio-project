@@ -7,15 +7,17 @@ export const getAllPosts = async (req, res) => {
     const [results] = await connection.query('SELECT * FROM projectPosts');
     res.json(results);
   } catch (error) {
-    console.error(error);
+    console.error('Error executing SQL query:', error);
     res.status(500).json({
       status: 'error',
-      message: 'An error occurred while retrieving posts.'
+      message: 'An error occurred while retrieving posts.',
+      error: error.message
     });
   } finally {
     connection.release(); 
   }
-}
+};
+
 
 // Get post by id
 export const getPostById = async (req, res) => {

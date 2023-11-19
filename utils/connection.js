@@ -8,12 +8,14 @@ let connectionPool;
 async function startConnectionPool() {
   if (!connectionPool) {
     try {
-      const url = new URL(process.env.CLEARDB_DATABASE_URL);
+      const host = process.env.MYSQL_HOST || 'localhost'; 
+      const user = process.env.MYSQL_USER;
+      const password = process.env.MYSQL_PASSWORD;
+      const database = process.env.MYSQL_DATABASE;
 
-      const host = url.host;
-      const user = url.username;
-      const password = url.password;
-      const database = url.pathname.substr(1);
+      if (! host || !user || !password || !database) {
+        throw new Error('Missing required environment variables for MySQL connection');
+      }
 
       connectionPool = mysql.createPool({
         host,
